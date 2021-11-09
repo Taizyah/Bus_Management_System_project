@@ -1,5 +1,7 @@
 <?php
 
+    namespace includes;
+
     class Operations {
 
         private $connection;
@@ -27,6 +29,27 @@
             }
             
             return json_encode(array("message"=>"failed"));
+        }
+
+
+
+        /**
+         * This function sends a request to the admin to sign up a bus company...
+         * @param string $name
+         * @param string $address
+         * @param string $email
+         * @param string $number
+         * @param string $password
+         */
+        public function signup(string $name, string $address, string $email, string $number, string $password){
+            $hashedPassword = md5($password);
+            $addUserQuery = $this->connection->prepare("INSERT INTO requests ('name','address', 'email','phone','password') VALUES(?,?,?,?,?)");
+            $addUserQuery->bind_param("sssss", $name, $address, $email, $number, $hashedPassword);
+            if($addUserQuery->execute()){
+                echo json_encode(array("message"=>"success"));
+            }else{
+                echo json_encode(array("message"=>"failed"));
+            }
         }
 
     }

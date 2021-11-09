@@ -1,6 +1,6 @@
 <?php
 
-namespace includes;
+    namespace includes;
 
     class DBConnection {
 
@@ -20,9 +20,9 @@ namespace includes;
 
         public function getConnection(string $host, string $username, string $password, string $database){
             try{
-                return new MySQLI($host, $username, $password, $database);
+                return new \MySQLI($host, $username, $password, $database);
 
-            }catch(exception $exception){
+            }catch(\exception $exception){
                 echo $exception;
             }
         }
