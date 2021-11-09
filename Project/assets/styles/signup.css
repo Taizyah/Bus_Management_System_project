@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./../images/jonathan-borba-LnggkK8864c-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background: lightgray;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow-y: hidden;
+}
+body img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.signup_body {
+    position: absolute;
+  background: #fff;
+  opacity: 0.93;
+  width: 700px;
+  height: 87vh;
+  border-radius: 20px;
+}
+
+.signup_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: lightseagreen;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    font-family: arial;
+}
+.signup_bottom {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.signup_bottom form{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.signup_bottom form input{
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+  text-align: start;
+}
+.signup_bottom button {
+    padding: 10px 30px;
+    border: none;
+    color: white;
+    background: lightseagreen;
+    margin: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.signup_bottom button:hover {
+    border: 1px solid lightseagreen;
+    color: lightseagreen;
+    background: none;
+}
+
+
