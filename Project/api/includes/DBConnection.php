@@ -18,9 +18,9 @@
         }
 
 
-        public function getConnection(string $host, string $username, string $password, string $database){
+        public function getConnection(){
             try{
-                return new \MySQLI($host, $username, $password, $database);
+                return new \MySQLI("localhost", "root", "", "logsiticsmanagementsystem");
 
             }catch(\exception $exception){
                 echo $exception;

@@ -83,4 +83,8 @@ body img {
     background: none;
 }
 
+.error-display{
+    visibility: hidden;
+}
+
 

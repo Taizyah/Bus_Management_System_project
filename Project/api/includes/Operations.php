@@ -11,6 +11,11 @@
         }
 
 
+        /**
+         * Function to log in the user 
+         * @param string $username
+         * @param string $password
+         */
         public function login(string $username, string $password){
 
             $hashedPassword = md5($password);
@@ -25,7 +30,7 @@
             $resultSet = $getUser->get_result();
             if($resultSet->num_rows > 0) {
                 $user = $resultSet->fetch_assoc();
-                return json_encode(array("user"=>[$user]));
+                return json_encode(array($user));
             }
             
             return json_encode(array("message"=>"failed"));
@@ -43,12 +48,12 @@
          */
         public function signup(string $name, string $address, string $email, string $number, string $password){
             $hashedPassword = md5($password);
-            $addUserQuery = $this->connection->prepare("INSERT INTO requests ('name','address', 'email','phone','password') VALUES(?,?,?,?,?)");
+            $addUserQuery = $this->connection->prepare("INSERT INTO requests (`name`,`address`, `email`,`phone`,`password`) VALUES(?,?,?,?,?)");
             $addUserQuery->bind_param("sssss", $name, $address, $email, $number, $hashedPassword);
             if($addUserQuery->execute()){
-                echo json_encode(array("message"=>"success"));
+                return json_encode(array("message"=>"success"));
             }else{
-                echo json_encode(array("message"=>"failed"));
+                 json_encode(array("message"=>"failed"));
             }
         }
 

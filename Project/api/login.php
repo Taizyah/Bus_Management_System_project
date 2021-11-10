@@ -4,10 +4,8 @@
     use includes\DBConnection;
     use includes\Operations;
 
-    $dbconnection = DBConnection::getInstance()->getConnection("localhost", "root", "", "logsiticsmanagementsystem");
+    $dbconnection = DBConnection::getInstance()->getConnection();
     $operations = new Operations($dbconnection);
-
-    // echo $operations->login("tembodalitso2@gmail.com", "1234");
     
     if(isset($_POST['username']) AND isset($_POST['password'])){
         if(!empty($_POST['username']) AND !empty($_POST['password'])){
