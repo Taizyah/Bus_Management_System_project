@@ -24,16 +24,16 @@
                 return json_encode(array("message"=>"One or more required fields is empty.")); 
             }
 
-            $getUser = $this->connection->prepare("SELECT * FROM users WHERE `email`=? AND `password`=?");
-            $getUser->bind_param("ss", $username, $password);
+            $getUser = $this->connection->prepare("SELECT `id`,`email` FROM users WHERE `email`=? AND `password`=?");
+            $getUser->bind_param("ss", $username, $hashedPassword);
             $getUser->execute();
             $resultSet = $getUser->get_result();
             if($resultSet->num_rows > 0) {
                 $user = $resultSet->fetch_assoc();
-                return json_encode(array($user));
+                return json_encode(array("response"=>$user));
             }
             
-            return json_encode(array("message"=>"failed"));
+            return json_encode(array("response"=>"failed"));
         }
 
 
@@ -48,7 +48,7 @@
          */
         public function signup(string $name, string $address, string $email, string $number, string $password){
             $hashedPassword = md5($password);
-            $addUserQuery = $this->connection->prepare("INSERT INTO requests (`name`,`address`, `email`,`phone`,`password`) VALUES(?,?,?,?,?)");
+            $addUserQuery = $this->connection->prepare("INSERT INTO users (`name`,`address`, `email`,`phone`,`password`) VALUES(?,?,?,?,?)");
             $addUserQuery->bind_param("sssss", $name, $address, $email, $number, $hashedPassword);
             if($addUserQuery->execute()){
                 return json_encode(array("message"=>"success"));

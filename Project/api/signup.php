@@ -8,13 +8,13 @@
     $dbconnection = DBConnection::getInstance()->getConnection();
     $operations = new Operations($dbconnection);
 
-    if(isset($_POST['company_name']) AND isset($_POST['company_address']) AND isset($_POST['company_email']) AND isset($_POST['company_phone']) AND isset($_POST['company_password'])){
+    if(isset($_POST['name']) AND isset($_POST['address']) AND isset($_POST['email']) AND isset($_POST['phone']) AND isset($_POST['password'])){
 
-        $name = $_POST['company_name'];
-        $address = $_POST['company_address'];
-        $email = $_POST['company_email'];
-        $phone = $_POST['company_phone'];
-        $password = $_POST['company_password'];
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $password = $_POST['password'];
 
         echo $operations->signup($name, $address, $email, $phone, $password);
     }

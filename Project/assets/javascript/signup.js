@@ -12,25 +12,32 @@ $(document).ready(function(){
     
     $("#sign-up-btn").click(function(target){
         target.preventDefault();
-        if(!isMatchedPassword(password, confirmPassword)){
-            showError(errorDisplay, "Passwords do not match");
+
+        if(!isPasswordValid(password.value) || !isPasswordValid(confirmPassword.value)){
+            showError(errorDisplay, "password field should have atleast 8 characters.");
             return;
         }
+
+        if(!isMatchedPassword(password, confirmPassword)){
+            showError(errorDisplay, "passwords do not match");
+            return;
+        }
+
 
         $.ajax({
             type: "POST",
             url: "./../api/signup.php",
             data: {
-                company_name: name.value,
-                company_address: address.value,
-                company_email: email.value,
-                company_phone: phone.value,
-                company_password: password.value
+                name: name.value,
+                address: address.value,
+                email: email.value,
+                phone: phone.value,
+                password: password.value
             },
             success: function(result){
-                const object = JSON.parse(result);
-                const message = object["message"];
-                if(message === "success"){
+                const response = JSON.parse(result);
+                const responseMessage = response["message"];
+                if(responseMessage === "success"){
                     window.location.href = './../public/request.html';
                 }
             }
@@ -44,6 +51,14 @@ $(document).ready(function(){
 
 function isMatchedPassword(password, confirmPassword){
     if(password.value === confirmPassword.value){
+        return true;
+    }
+    return false;
+}
+
+function isPasswordValid(password){
+    if(password.length >= 8){
+        // Create a RegEx to check if the password has atleast 1 uppercase, 1 lowercase and a number in it, otherwise it does not pass the requirement
         return true;
     }
     return false;
