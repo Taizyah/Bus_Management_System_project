@@ -23,6 +23,8 @@ $(document).ready(function(){
             return;
         }
 
+        // check if the password matches the pattern for the password.
+
 
         $.ajax({
             type: "POST",
@@ -58,7 +60,6 @@ function isMatchedPassword(password, confirmPassword){
 
 function isPasswordValid(password){
     if(password.length >= 8){
-        // Create a RegEx to check if the password has atleast 1 uppercase, 1 lowercase and a number in it, otherwise it does not pass the requirement
         return true;
     }
     return false;
@@ -71,4 +72,13 @@ function showError(component, message){
         component.style.visibility = 'hidden';
     }, 5000);
 
+}
+
+
+function isMatchedPasswordPattern(password){
+    //Regular Expression comes here
+    // if(regular expression){
+    //     return true;
+    // }
+    // return false;
 }

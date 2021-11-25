@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../images/blake-wisz-GFrBMipOd_E-unsplash.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+    .booking-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background: #111;
+        width: 64.9%;
+        margin-bottom: 50px;
+        opacity: 0.95;
+        position: absolute;
+        top: 10px;
+    }
+   .booking-title > h2 {
+        color: white;
+     }
+form .form-body{
+    display: flex;
+    opacity: 0.90;
+    justify-content: space-around;
+    height: 450px;
+    width: 880px;
+    background: #111;
+    position: relative;
+}
+.appreciation-text {
+    opacity: 0.90;
+    color: white;
+    height: 200px;
+    width: 880px;
+    background: #111;
+    display: none;
+}
+form .form-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    height: 100%;
+    width: 45%;
+}
+form .form-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+}
+form input {
+    padding: 8px 20px;
+    border: none;
+    width: 330px;
+    margin-bottom: 10px;
+    outline: none
+}
+form span {
+    color: lightgray;
+    padding: 8px;
+}
+form button {
+    width: 330px;
+    padding: 10px 20px;
+    margin-top: 21px;
+    border: none;
+    color: white;
+    background: tomato;
+    cursor: pointer;
+}
+form button:active {
+    transform: scale(0.99)
+}
+.confirmation-text {
+    position: absolute;
+    color: lightgray;
+    top: 70%;
+    width: 100%;
+}
+.confirmation-text h3 {
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-left: 200px;
+    
+}
+.cancel-button {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 40px;
+    width: 140px;
+    color: white;
+    background: red;
+    visibility: hidden;
+    cursor: pointer;
+}

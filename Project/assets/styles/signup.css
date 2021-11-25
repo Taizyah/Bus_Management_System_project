@@ -29,7 +29,14 @@ body img {
   height: 87vh;
   border-radius: 20px;
 }
-
+.signin_body {
+    position: absolute;
+    background: #fff;
+    opacity: 0.93;
+    width: 700px;
+    height: 55vh;
+    border-radius: 20px;
+}
 .signup_top {
     display: flex;
     flex-direction: column;
@@ -84,15 +91,17 @@ body img {
 }
 
 .error-display{
+    margin: auto;
     visibility: hidden;
-    width: 100%;
+    width: 80%;
+    height: 40px;
     padding: 10px;
     color: red;
     font-family: Arial;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid red;
     box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.19), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
 }
