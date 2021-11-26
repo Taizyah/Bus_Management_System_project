@@ -20,20 +20,16 @@
 
             $hashedPassword = md5($password);
 
-            if(empty($username) || empty($password)){
-                return json_encode(array("message"=>"One or more required fields is empty.")); 
-            }
-
-            $getUser = $this->connection->prepare("SELECT `id`,`email` FROM users WHERE `email`=? AND `password`=?");
+            $getUser = $this->connection->prepare("SELECT `id`,`email`, `name` FROM users WHERE `email`=? AND `password`=?");
             $getUser->bind_param("ss", $username, $hashedPassword);
             $getUser->execute();
             $resultSet = $getUser->get_result();
             if($resultSet->num_rows > 0) {
                 $user = $resultSet->fetch_assoc();
-                return json_encode(array("response"=>$user));
+                return json_encode(array("message"=>$user));
             }
             
-            return json_encode(array("response"=>"failed"));
+            return json_encode(array("message"=>"failed"));
         }
 
 

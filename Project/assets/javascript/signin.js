@@ -1,17 +1,35 @@
-var emailInput = document.getElementById('company-email');
-var passwordInput = document.getElementById('company-password');
-var submitButton = document.getElementById('sign-in-btn');
-var errorDisplay = document.getElementById('error-display');
 
-submitButton.addEventListener('click', signIn);
+$(document).ready(function(){
 
-function signIn(e) {
-    e.preventDefault();
-    if(!emailInput.value || !passwordInput.value) {
-        errorDisplay.style.visibility = "visible";
-        errorDisplay.innerHTML = "<span>Please fill out the form completely</span>"
-    } else {
-        return null
-    }
-}
+    const emailInput = document.getElementById('company-email');
+    const passwordInput = document.getElementById('company-password');
+    const errorDisplay = document.getElementById('error-display');
+
+    $("#sign-in-btn").click(function(target){
+
+        $.ajax({
+            type: "POST",
+            url: "./../api/login.php",
+            data:{
+                username: emailInput.value,
+                password: passwordInput.value
+            },
+            success: function(data){
+                const responseObject = JSON.parse(data);
+                const responseMessage = responseObject["message"];
+                if(responseMessage === "failed"){
+                    alert("No users exeh!!! try other cerdentials bally...");
+                }
+                else{
+                    const userId = responseMessage["id"];
+                    const name = responseMessage["name"];
+                    window.location.href = `./../public/index.view.php?userid=${userId}&name=${name}`;
+                }
+            }
+        })
+
+    });
+
+});
+
 
