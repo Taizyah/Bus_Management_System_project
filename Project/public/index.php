@@ -8,10 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="booking-title">
-        <h2>BUS BOOKING ENQUIRY FORM</h2>        
+    <nav class="nav-main">
+        <div class="nav-main-hamburger">            
+            <img src="./../assets/icons/bus-logo.png" class="hamburger"/>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">FAq</a></li>
+        </ul>
+    </nav>
+    <div class="customer-formButtons">
+       <a href="./signin.html"><button>Sign In</button></a> 
+        <button href="./signup.html">Sign Up</button>
     </div>
+    <div class="about">
+        <h2>About</h2>
+        <div class="about-text">
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum odio iste eos non repellat in ipsa animi officia, aliquid deleniti porro. Vel nisi, dolores voluptatum sed qui unde numquam quis. Quo natus harum magnam quia animi accusamus culpa esse debitis illum adipisci ipsam beatae fugiat voluptate tempora excepturi aperiam, deleniti quod, quas quidem ad asperiores nisi iste ullam! Eaque adipisci ipsa est nesciunt facilis minima sint doloremque ea harum suscipit? Voluptatem voluptas alias, nisi adipisci quisquam possimus quam libero dolor in impedit consectetur architecto dicta error ut quibusdam iusto numquam et. Accusantium ad nemo quod asperiores unde quas exercitationem libero nulla debitis voluptatem sed, at magni deserunt iusto? Hic debitis rerum nemo consequatur explicabo natus veritatis, magnam harum commodi, porro magni voluptatum aspernatur. Maiores molestiae deleniti unde fugit harum iste eos sed exercitationem laudantium eaque quia dicta veniam adipisci, nostrum error, commodi mollitia ratione ea saepe amet reiciendis sit laboriosam!
+            </span>
+        </div>
+    </div>
+
     <form action="">
+        <!-- <h2 class="booking-form-title">Booking Form</h2> -->
         <div class="form-body">
             <div class="form-left">
                 <span>Your Name</span>
@@ -47,8 +68,39 @@
                 <span>Cancel</span>
             </div>
         </center>
-    <script>
 
+    <footer>
+        <ul>
+            <h1>Customers</h1>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Email</a></li>
+            <li><a href="">Developers</a></li>
+            <li><a href="">Booking Information</a></li>
+            <li><a href="">Faq</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+        <ul>
+            <h1>Customers</h1>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Email</a></li>
+            <li><a href="">Developers</a></li>
+            <li><a href="">Booking Information</a></li>
+            <li><a href="">Faq</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+        <ul>
+            <h1>Customers</h1>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Email</a></li>
+            <li><a href="">Developers</a></li>
+            <li><a href="">Booking Information</a></li>
+            <li><a href="">Faq</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </footer>
+
+
+    <script> 
        var submitButton = document.getElementById('submit-button') 
        var text = document.querySelector('.confirmation-text h3');
        var cancelButton = document.querySelector('.cancel-button');

@@ -23,7 +23,7 @@ $(document).ready(function(){
                 else{
                     const userId = responseMessage["id"];
                     const name = responseMessage["name"];
-                    window.location.href = `./../public/index.view.php?userid=${userId}&name=${name}`;
+                    window.location.href = `./../public/dashboard.view.php?userid=${userId}&name=${name}`;
                 }
             }
         })

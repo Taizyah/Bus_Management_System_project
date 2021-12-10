@@ -7,40 +7,9 @@ body {
     font-family: Arial;
     position: relative;
     background: lightgray;
-    overflow-x: hidden;
+    height: 200vh;
 }
 
-.nav-main {
-    display: flex;
-    height: 70px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #111;
-
-    border-bottom: 1px solid rgb(102, 102, 102);
-}
-.nav-main .nav-list {
-    display: flex;
-    justify-content: space-around;
-    
-}
-.nav-main h2 {
-    color: white;
-    font-size: 14px;
-}
-.nav-list li {
-    list-style: none; 
-    
-}
-.nav-list a {
-    color: lightgray;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 20px;
-    font-size: 15px;
-
-}
 
 /* header styles */
 .website-header {
@@ -131,96 +100,3 @@ body {
     background: green;
 }
 
-/* sidebar styling */
-.side-bar {
-    z-index: 10;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: #111;
-    width: 0px;
-}
-.side-bar {
-    display: flex;
-    flex-direction: column;
-    transition: all 0.2s ease-in-out;
-}
-.side-bar h3{
-    color: lightgray;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-self: flex-end;
-    margin-right: 40px;
-    font-family: verdana;
-    visibility: hidden;
-}
-
-.sidebar-navlists {
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- justify-content: space-around;
- margin-left: 30px;
- visibility: hidden;
-}
-.sidebar-navlists li {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    padding: 10px;
-}
-.sidebar-navlists a {
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.1s ease-in-out;
-    position: relative;
-    margin-left: 15px;
-}
-.sidebar-navlists a:hover {
-    border-bottom: 1px solid gold;
-    padding-bottom: 5px;
-    transform: scaleX(10px);
-    margin-left: 5px;
-    margin-top: 5px;
-}
-.sidebar-navlists a::after {
-    content: "";
-    position: absolute;
-    transform: scaleX(0px);
-    transform-origin: center;
-}
-
-.sidebar-navlists img {
-    height: 20px;
-    object-fit: contain;
-    background-color: #fff;
-    border-radius: 50%;
-}
-.sidebar-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.cancel {
-    height: 30px;
-    cursor: pointer;
-    object-fit: contain;
-    background: lightseagreen;
-    border-radius: 50%;
-}
-
-/* hamburger styles */
-
-.nav-main-hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.nav-main-hamburger img{
-    height: 30px;
-    width: 40px;
-    margin-right: 15px;
-    background: lightseagreen;
-    cursor: pointer;
-}
