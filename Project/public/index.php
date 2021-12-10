@@ -20,7 +20,7 @@
     </nav>
     <div class="customer-formButtons">
        <a href="./signin.html"><button>Sign In</button></a> 
-        <button href="./signup.html">Sign Up</button>
+        <a href="/signup.html"><button >Sign Up</button></a>
     </div>
     <div class="about">
         <h2>About</h2>
