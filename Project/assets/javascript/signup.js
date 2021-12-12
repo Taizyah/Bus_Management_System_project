@@ -26,8 +26,7 @@ $(document).ready(function(){
         // check if the password matches the pattern for the password.
 
 
-        $.ajax({
-            type: "POST",
+        $.post({
             url: "./../api/signup.php",
             data: {
                 name: name.value,

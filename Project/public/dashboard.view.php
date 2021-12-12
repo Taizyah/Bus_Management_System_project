@@ -3,14 +3,14 @@
     
     use includes\Sessions;
 
-    // $sessionClass = Sessions::getInstance($_GET['userid']);
-    // $session = $sessionClass->getSessionVariable();
+    $sessionClass = Sessions::getInstance($_GET['userid']);
+    $session = $sessionClass->getSessionVariable();
 
-    // if($session == null){
-    //     header('location: signin.html');
-    // }
+    if($session == null){
+        header('location: signin.html');
+    }
 
-    // else{
+    else{
 ?>
         <html>
             <head>
@@ -32,7 +32,7 @@
                 <div class="website-header">
                         <div class="header-text">
                             <h1>Welcome</h1>
-                            <h3><?php echo "User"; ?></h3>
+                            <h3><?php echo $_GET['name']; ?></h3>
                         </div>
                     <div class="header-row1">
                         <div class="card customers">
@@ -121,11 +121,11 @@
                             </li> -->
                         </ul>
                 </div>
-                <script src="./../assets/javascript/index.js"></script>
+                <script src="./../assets/javascript/dashboard.js"></script>
             </body>
         </html>
 
 <?php
-    // }
+    }
 ?>
 

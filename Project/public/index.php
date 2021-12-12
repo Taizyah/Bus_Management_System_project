@@ -20,7 +20,7 @@
     </nav>
     <div class="customer-formButtons">
        <a href="./signin.html"><button>Sign In</button></a> 
-        <a href="/signup.html"><button >Sign Up</button></a>
+        <a href="./signup.html"><button >Sign Up</button></a>
     </div>
     <div class="about">
         <h2>About</h2>
@@ -43,7 +43,7 @@
                 <input type="text" placeholder="Contact" name="contact" id="contact"/>
                 
                 <span>Date Of Travel</span>
-                <input type="text" placeholder="Date" name="date" id="date"/>
+                <input type="datetime-local" placeholder="Date" name="date" id="date"/>
             </div>
             <div class="form-right">
                 <span>From</span>
@@ -80,7 +80,7 @@
             <li><a href="">Help</a></li>
         </ul>
         <ul>
-            <h1>Customers</h1>
+            <h1>Contact</h1>
             <li><a href="">Contacts</a></li>
             <li><a href="">Email</a></li>
             <li><a href="">Developers</a></li>
@@ -89,7 +89,7 @@
             <li><a href="">Help</a></li>
         </ul>
         <ul>
-            <h1>Customers</h1>
+            <h1>Other Details</h1>
             <li><a href="">Contacts</a></li>
             <li><a href="">Email</a></li>
             <li><a href="">Developers</a></li>
@@ -99,33 +99,5 @@
         </ul>
     </footer>
 
-
-    <script> 
-       var submitButton = document.getElementById('submit-button') 
-       var text = document.querySelector('.confirmation-text h3');
-       var cancelButton = document.querySelector('.cancel-button');
-       var formBody = document.querySelector('.form-body');
-       var appText = document.querySelector('.appreciation-text');
-       
-       submitButton.addEventListener('click', displayText);
-       cancelButton.addEventListener('click', clearScreen);
-
-       function clearScreen () {
-           formBody.style.display = "none";
-           text.style.display = "none";
-           appText.style.display = "unset";
-           cancelButton.style.display = "none";
-       }
-
-       function displayText(e) {
-            e.preventDefault();
-
-            setTimeout(() => {
-                text.style.visibility = "visible"
-                cancelButton.style.visibility = "visible"
-            }, 800)
-         
-        }
-    </script>
 </body>
 </html>

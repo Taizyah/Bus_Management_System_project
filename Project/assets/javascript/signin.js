@@ -7,8 +7,7 @@ $(document).ready(function(){
 
     $("#sign-in-btn").click(function(target){
 
-        $.ajax({
-            type: "POST",
+        $.post({
             url: "./../api/login.php",
             data:{
                 username: emailInput.value,
