@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 nav {
     height: 90px;
@@ -11,7 +12,7 @@ nav {
 }
 
 body {
-    height: 100vh;
+    height: 200vh;
     background: #000;
 }
 nav img{
@@ -52,6 +53,10 @@ nav img{
     margin-top: 3rem;
 }
 
+.registration__container-form > h1 {
+    color: #fff;
+    padding: 1rem;
+}
 .registration__menu > a {
     font-size: 14px;
     border: 1px solid #097057;
@@ -79,7 +84,20 @@ nav img{
 }
 .registration__container-form{
     display: flex;
+    flex-direction: column;
     margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.form-group1 {
+    padding-bottom: 8rem !important;
+    padding-top: 2rem;
+}
+.registration__forms {
+    display: flex;
+    max-width: 85vw;
     justify-content: center;
 }
 .registration__container-form a{

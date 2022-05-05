@@ -12,9 +12,9 @@
             <img src="../assets/images/bus-logo 3.png" alt="bus_logo" />
 
                 <div class="nav__links">
-                    <a href="#">Home</a>
+                    <a href="./welcome.html">Home</a>
                     <a href="#">About</a>
-                    <a href="#">Bookings Contact</a>
+                    <a href="registration_form.html">Bookings Contact</a>
                 </div>
 
                 <div class="nav__right">
@@ -23,25 +23,48 @@
                 </div>
             </nav>
             <div class="registration__menu">
-                <a href="#">Ticket</a>
-                <a href="#">Bus</a>
+                <a href="#customer_form">Ticket</a>
+                <a href="#company_form">Bus</a>
             </div>
 
-            <div class="registration__container-form">
-
+            <div class="registration__container-form form-group1" id="customer_form">
+                <h1>Customer Booking Form</h1>
             
-            <div class="registration__left">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="contact">
-                <input type="text" placeholder="Date">
+            <div class="registration__forms">
+                <div class="registration__left">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="contact">
+                    <input type="text" placeholder="Date">
+                </div>
+                <div class="registration__right">
+                    <input type="text" placeholder="Mpika">
+                    <input type="text" placeholder="Lusaka">
+                    <input type="text" placeholder="No of Tickets">
+                    <a href="#">Submit</a>
+                </div>
             </div>
-            <div class="registration__right">
-                <input type="text" placeholder="Mpika">
-                <input type="text" placeholder="Lusaka">
-                <input type="text" placeholder="No of Tickets">
-                <a href="#">Submit</a>
+            
+        </div>
+
+        <div class="registration__container-form" id="company_form">
+            <h1>Company Booking Form</h1>
+            
+            <div class="registration__forms">
+                <div class="registration__left">
+                    <input type="text" placeholder="Company Name">
+                    <input type="text" placeholder="Company Address">
+                    <input type="text" placeholder="Company Email">
+                    <input type="text" placeholder="Contact">
+                </div>
+                <div class="registration__right">
+                    <input type="text" placeholder="Number Of Seats">
+                    <input type="text" placeholder="Date Of Collection">
+                    <input type="text" placeholder="Estimated Periods">
+                    <a href="#">Submit</a>
+                </div>
             </div>
+            
         </div>
     </body>
 </html>
